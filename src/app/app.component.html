@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>TensorFlow.js Prediction</h1>
+
+  <div class="draw-container">
+    <h3>Draw Here</h3>
+    <canvas appDrawable (newImage)="predict($event)"></canvas>
+    <div>
+      <button (click)="canvas.clear()">Erase</button>
+      <button onclick="window.location.reload()">Reload</button>
+    </div>
+  </div>
+
+  <div class="prediction-container">
+    <h3>TensorFlow Prediction</h3>
+    <app-chart [predictions]="predictions"></app-chart>
+  </div>
+</div>
